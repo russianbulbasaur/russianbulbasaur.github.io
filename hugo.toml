@@ -1,6 +1,6 @@
 baseURL = 'https://russianbulbasaur.github.io/'
 languageCode = 'en-us'
-title = 'russianbulbasaur'
+title = 'Ankit'
 theme = 'hugo-theme-nostyleplease'
 
 [outputs]
