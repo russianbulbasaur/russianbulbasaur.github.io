@@ -42,7 +42,7 @@
       <p>
         <time>{{ .Date | time.Format "Jan 02, 2006" }}</time>
         &nbsp;:&nbsp;
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
       </p>
     {{ end }}
     <p><a href="/walkthroughs/">full archive &rarr;</a></p>

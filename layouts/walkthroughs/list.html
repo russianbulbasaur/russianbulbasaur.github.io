@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ partial "back_link.html" . }}
+
+<h1>{{ .Title }}</h1>
+
+{{ range .Pages.GroupByDate "2006 Year" }}
+  <p>{{ .Key }}</p>
+  <ul>
+    {{ range .Pages }}
+      <li>
+        <span>{{ .Date | time.Format site.Params.theme_config.date_format }}</span>
+        &nbsp;<a href="{{ .Params.link }}" target="_blank" rel="noopener">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ end }}
