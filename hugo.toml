@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'russianbulbasaur'
 theme = 'hugo-theme-nostyleplease'
 
+[outputs]
+  home    = ["HTML"]
+  section = ["HTML"]
+  page    = ["HTML"]
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
@@ -27,6 +32,7 @@ theme = 'hugo-theme-nostyleplease'
     ordered    = false
 
 [params]
+  favicon = "/bulbasaur.png"
   [params.theme_config]
     appearance        = "auto"
     back_home_text    = ".."
