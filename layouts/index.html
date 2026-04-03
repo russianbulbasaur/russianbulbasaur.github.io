@@ -11,6 +11,7 @@
 <nav>
   <a href="/posts/">blog</a> &nbsp;&middot;&nbsp;
   <a href="/walkthroughs/">walkthroughs</a> &nbsp;&middot;&nbsp;
+  <a href="/clixidiaries/">clixi diaries</a> &nbsp;&middot;&nbsp;
   <a href="https://github.com/russianbulbasaur" target="_blank" rel="me">github</a> &nbsp;&middot;&nbsp;
   <a href="https://www.youtube.com/@Genji_hehe" target="_blank" rel="me">youtube</a> &nbsp;&middot;&nbsp;
   <a href="https://www.linkedin.com/in/anki-t/" target="_blank" rel="me">linkedin</a>
@@ -49,6 +50,23 @@
     <p><a href="/walkthroughs/">full archive &rarr;</a></p>
   {{ else }}
     <p><em>no walkthroughs yet.</em></p>
+  {{ end }}
+</section>
+
+<section>
+  <h2>recent clixi diaries</h2>
+  {{ $clixidiaries := (where site.RegularPages "Section" "clixidiaries") }}
+  {{ if $clixidiaries }}
+    {{ range first 5 $clixidiaries }}
+      <p>
+        <time>{{ .Date | time.Format "Jan 02, 2006" }}</time>
+        &nbsp;:&nbsp;
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </p>
+    {{ end }}
+    <p><a href="/clixidiaries/">full archive &rarr;</a></p>
+  {{ else }}
+    <p><em>no entries yet.</em></p>
   {{ end }}
 </section>
 
